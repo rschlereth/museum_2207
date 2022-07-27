@@ -15,7 +15,7 @@ RSpec.describe Museum do
 
     it 'has exhibits' do
         dmns = Museum.new("Denver Museum of Nature and Science")
-        expect(dmns.exhibits).to eq ([])
+        expect(dmns.exhibits).to eq([])
     end
 
     it 'can add exhibits' do
@@ -27,11 +27,13 @@ RSpec.describe Museum do
         dmns.add_exhibit(gems_and_minerals)
         dmns.add_exhibit(dead_sea_scrolls)
         dmns.add_exhibit(imax)
-        expect(dmns.exhibits).to eq(Exhibit.new)
+        expect(dmns.exhibits).to eq(Exhibits)
     end
 
     it 'has patrons' do
         dmns = Museum.new("Denver Museum of Nature and Science")
+        patron_1 = Patron.new("Bob", 20)
+        patron_2 = Patron.new("Sally", 20)
         expect(dmns.patrons).to eq([])
     end
 
@@ -58,3 +60,5 @@ RSpec.describe Museum do
         patron_2.add_interest("IMAX")
     end
 end
+
+    "This is where Iteration 3 would go if I could just pace myself and stop making stupid mistakes (or, more generally, get my head out of my ass)."
